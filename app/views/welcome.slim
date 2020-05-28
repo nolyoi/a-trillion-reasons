@@ -1,0 +1,15 @@
+div class="container"
+      div class="row"
+        div class="col-md text-center"
+          h1 Current Bitcoin Price (USD)
+          h2 style="color: green"
+            | $#{@btc.price}
+
+          h1 Bitcoin Supply
+          h2
+            | #{@btc.current_supply.delete_suffix(".0")} / #{@btc.max_supply.delete_suffix(".0")}
+        div class="col-md text-center"
+          h1
+            Total U.S. Debt
+          h2 style="color:red"
+            | -$#{@debt}

@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title A Trillion Reasons
+    meta name="keywords" content="template language"
+    meta name="author" content="nolyoi"
+    link rel="stylesheet" type="text/css" href="/stylesheets/style.css"
+    link rel="stylesheet" href="/stylesheets/bootstrap.css"   
+    script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.js" 
+  body
+    nav class="navbar navbar-light bg-light"
+      div class="container"
+        a class="navbar-brand" href="#"
+          img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4360882671553858080-256.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"
+          | A Trillion Reasons
+
+    div class="container"
+      div class="row"
+        div class="col-md text-center"
+          h1 Current Bitcoin Price (USD)
+          h2 style="color: green"
+            | $#{@btc.price}
+
+          h1 Bitcoin Supply
+          h2
+            | #{@btc.current_supply.delete_suffix(".0")} / #{@btc.max_supply.delete_suffix(".0")}
+        div class="col-md text-center"
+          h1
+            Total U.S. Debt
+          h2 style="color:red"
+            | -$#{@debt}
+
+    nav class="navbar fixed-bottom navbar-light bg-light float-center"
+      div class="container"
+        div class="form-row"
+        div class="col-6"
+          p class="mt-4 float-right text-right" 
+            | Join the Trillion Reasons mailing list for crypto updates!
+        div class="col-6"
+          form class="form-inline float-left"
+            input type="text" class="form-control mr-2" placeholder="you@example.com"
+            button type="button" class="btn btn-success"
+              | Subscribe
+            
+                    
+    footer class="bg-dark py-5"
+      div class="container"
+        div class="row"
+          div class="col-md text-light text-center"
+            p Help support this small resource 
+            p BTC: 3AvFf9eMNprB7ESYZ78BhMaxsPZQSD8Mjn | 
+              ETH: 0x98c10E4431fc2Fd763532cB67793A64F0eEc153D <br> 
+              ZEC: t1bipHW4a33y54YJuBmJBPqFV5sS5uAgdk6
+  
+  script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"
+  script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"
