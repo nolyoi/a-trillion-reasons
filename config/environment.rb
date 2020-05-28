@@ -11,6 +11,7 @@ ActiveRecord::Base.establish_connection(
 # Gems
 require 'open-uri'
 require 'rest-client'
+require 'time'
 require 'slim'
 
 require './app/controllers/application_controller'

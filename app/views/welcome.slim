@@ -7,7 +7,7 @@ div class="container"
 
           h1 Bitcoin Supply
           h2
-            | #{@btc.current_supply.delete_suffix(".0")} / #{@btc.max_supply.delete_suffix(".0")}
+            | #{@btc.circulating_supply} / #{@btc.total_supply}
         div class="col-md text-center"
           h1
             Total U.S. Debt
