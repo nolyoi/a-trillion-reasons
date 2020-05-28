@@ -5,7 +5,7 @@ class Asset < ActiveRecord::Base
     time_now = Time.now.min
     assets.each do |a|
       updated_at = a.updated_at.min
-      if time_now >= updated_at + 5
+      if time_now >= updated_at + 5 or updated_at == nil
         if a.name == "Bitcoin"
             url = a.api_url
             response = RestClient.get(url)
