@@ -1,5 +1,5 @@
 class Asset < ActiveRecord::Base
-  
+
   def self.check
     assets = self.all
     time_now = Time.now.min
@@ -13,7 +13,6 @@ class Asset < ActiveRecord::Base
             a.price = api["market_data"]["current_price"]["usd"].to_s
             a.circulating_supply = api["market_data"]["circulating_supply"]
             a.total_supply = api["market_data"]["total_supply"]
-            a.save
           elsif a.name == "United States Dollar"
 
           end
